@@ -2,10 +2,10 @@
 
 Uma interface de usuário moderna e interativa que combina uma **Linha do Tempo (Timeline)** responsiva com um **Carrossel de Imagens 3D**. Este projeto foi desenvolvido para demonstrar habilidades avançadas em CSS3, animações fluidas e manipulação dinâmica de elementos com JavaScript.
 
-## 🚀 Demonstração
+##  Demonstração
 O projeto apresenta uma experiência imersiva onde o usuário navega por marcos cronológicos, acompanhados de uma galeria que utiliza profundidade e perspectiva real para destacar conteúdos visuais.
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 * **HTML5**: Estruturação semântica de dados.
 * **CSS3 (Advanced)**: 
     * **Transformações 3D**: Uso de `perspective`, `rotateY` e `translate3d` para criar profundidade no carrossel.
@@ -14,7 +14,7 @@ O projeto apresenta uma experiência imersiva onde o usuário navega por marcos 
     * **Responsividade**: Implementação de Media Queries para adaptação total em dispositivos móveis.
 * **JavaScript (Vanilla)**: Lógica para controle de estados da galeria, navegação de slides e interatividade da timeline.
 
-## ✨ Funcionalidades Técnicas
+##  Funcionalidades Técnicas
 * **Carrossel com Perspectiva**: Slider que utiliza o eixo Z para criar um efeito de profundidade, onde os slides laterais rotacionam e diminuem de opacidade automaticamente.
 * **Timeline Hiper-Responsiva**: Sistema de linha do tempo centralizada que se reconfigura para o formato vertical em telas menores, mantendo a legibilidade.
 * **Sincronização de Hover**: Efeitos visuais que vinculam os cards de conteúdo aos marcadores da linha do tempo, disparando brilho e escala simultaneamente.
@@ -28,7 +28,7 @@ O projeto apresenta uma experiência imersiva onde o usuário navega por marcos 
 ├── js/
 │   └── script.js      # Lógica de navegação e interatividade
 └── assets/            # Imagens e recursos de mídia
-🎨 Personalização
+ Personalização
 O projeto foi estruturado utilizando boas práticas de CSS, facilitando a alteração de cores e escalas através de variáveis ou substituição direta de classes, tornando-o um template versátil para:
 
 Portfólios de carreira.
