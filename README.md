@@ -29,7 +29,7 @@ O projeto apresenta uma experiência imersiva onde o usuário navega por marcos 
 │   └── script.js      # Lógica de navegação e interatividade
 └── assets/            # Imagens e recursos de mídia
 
-## Personalização
+## **Personalização**
 O projeto foi estruturado utilizando boas práticas de CSS, facilitando a alteração de cores e escalas através de variáveis ou substituição direta de classes, tornando-o um template versátil para:
 
 Portfólios de carreira.
@@ -38,4 +38,4 @@ Históricos de empresas/startups.
 
 Galeria de eventos interativos.
 
-## Desenvolvido por André Gustavo
+## **Desenvolvido por André Gustavo**
