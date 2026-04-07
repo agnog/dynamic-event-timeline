@@ -1,4 +1,3 @@
-/* Configurações Gerais */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -8,9 +7,6 @@ body {
     overflow-x: hidden; 
 }
 
-/* =========================================
-   TIMELINE - VERSÃO AMPLIADA
-   ========================================= */
 .timelineSection {
     margin-top: 80px;
     padding: 60px 20px;
@@ -26,7 +22,6 @@ body {
     margin: 40px auto;
 }
 
-/* Linha Central */
 .timeline::after {
     content: "";
     position: absolute;
@@ -49,7 +44,6 @@ body {
     cursor: pointer;
 }
 
-/* Bolinhas na Linha */
 .timelineItem::after {
     content: "";
     position: absolute;
@@ -70,7 +64,6 @@ body {
 .timelineItem.right { left: 50%; justify-content: flex-start; }
 .timelineItem.right::after { left: -12px; }
 
-/* CARD DE CONTEÚDO AMPLIADO */
 .timelineContent {
     background: #5a0f2e;
     padding: 30px; /* Aumentei o respiro interno do card */
@@ -94,7 +87,6 @@ body {
     background: #6e1338;
 }
 
-/* IMAGEM DENTRO DO CARD MAIOR */
 .timelineContent img {
     width: 110px; /* Aumentei de 75px para 110px */
     height: 110px;
@@ -117,7 +109,6 @@ body {
     line-height: 1.4;
 }
 
-/* Responsividade para Celular (ajusta para não estourar a tela) */
 @media screen and (max-width: 700px) {
     .timeline::after { left: 31px; }
     
@@ -146,9 +137,6 @@ body {
     }
 }
 
-/* =========================================
-   2. CARROSSEL 3D RESTAURADO (ORIGINAL)
-   ========================================= */
 .slider {
     position: relative;
     width: 100%;
@@ -183,7 +171,6 @@ body {
     z-index: 0;
 }
 
-/* Configurações das posições 3D */
 .slide-item.active {
     opacity: 1;
     transform: translate3d(0, 0, 0) scale(1.1);
@@ -233,11 +220,6 @@ body {
     transform: translateY(-50%) scale(1.1);
 }
 
-/* =========================================
-   3. RESTANTE DO CÓDIGO (PRESERVADO)
-   ========================================= */
-
-/* Fundo e Telas de Transição */
 #transicao-pos-video {
     position: fixed;
     top: 0; left: 0;
