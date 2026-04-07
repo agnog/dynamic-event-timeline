@@ -1,9 +1,9 @@
-// Configurações Iniciais
+
 const startDate = new Date("2022-10-07T00:00:00");
 let currentIndex = 0;
 let autoPlayInterval;
 
-// Elementos do DOM
+
 const audio = document.getElementById("musica");
 const playBtn = document.getElementById("playBtn");
 const progressBar = document.getElementById("progressBar");
@@ -15,8 +15,6 @@ window.onload = function() {
     updateTimer();
     setInterval(criarCoracao, 450);
 };
-
-// --- LOGICA DE ACESSO E VIDEO ---
 
 async function verificarSenha() {
     const senhaDigitada = document.getElementById('inputSenha').value;
@@ -101,8 +99,6 @@ function finalizarVideo() {
     }, 2500);
 }
 
-// --- PLAYER DE MÚSICA ---
-
 window.togglePlay = function() {
     if (audio.paused) {
         audio.play();
@@ -121,8 +117,6 @@ if (audio) {
         }
     });
 }
-
-// --- CONTADOR ---
 
 function updateTimer() {
     const now = new Date();
@@ -145,7 +139,6 @@ function updateTimer() {
     }
 }
 
-// --- SLIDER 3D E CORAÇÕES ---
 
 function atualizarSlider3D() {
     const items = document.querySelectorAll('.slide-item');
@@ -187,8 +180,6 @@ function criarCoracao() {
     heartContainer.appendChild(coracao);
     setTimeout(() => coracao.remove(), 7000);
 }
-
-// --- ENVELOPE ---
 
 window.mostrarEnvelope = function() {
     const envelope = document.getElementById("envelope");
