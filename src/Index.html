@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Andre ❤️ Emily</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="tela-login" class="overlay-tela">
+        <div class="login-box">
+            <div class="user-img"></div> 
+            <h3>Olá, Emily! ❤️</h3>
+            <p style="font-size: 14px; color: #ccc; line-height: 1.4; margin-bottom: 15px;">
+                Gustavo criou isso aqui para celebrar o seu aniversario!.<br>
+                Ele dedicou tempo e estudo para fazer cada detalhe!<br>
+                Espero que você goste.
+            </p>
+            <input type="password" id="inputSenha" class="input-senha" placeholder="Digite a senha...">
+            <p class="dica-senha">Dica: Data do nosso início (DDMMAAAA)</p>
+            <button onclick="verificarSenha()" class="btn-entrar">Entrar</button>
+        </div>
+    </div>
+
+    <div id="tela-aviso" class="overlay-tela" style="display: none;">
+        <div class="login-box" style="background: rgba(255,255,255,0.05); padding: 30px; border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+            <h2 style="color: #9333ea; margin-bottom: 15px;">Aguarde um instante...</h2>
+            <p style="font-size: 16px; line-height: 1.6; color: white;">
+                Antes de prosseguir, prepare o coração. <br>
+                Preparei algo muito especial para você assistir. ❤️
+            </p>
+            <p style="font-size: 13px; color: #aaa; margin-top: 10px;">(Certifique-se de que o som está ligado!)</p>
+            <button onclick="irParaLoading()" class="btn-entrar" style="margin-top: 25px;">Estou pronta ✨</button>
+        </div>
+    </div>
+
+    <div id="tela-loading" class="overlay-tela" style="display: none;">
+        <p id="status-loading">Validando acesso...</p>
+        <div class="loader-container">
+            <div class="loader-bar" id="barra-progresso"></div>
+        </div>
+    </div>
+
+    <div id="tela-video" class="overlay-tela" style="display: none;">
+        <video id="meuVideo" playsinline>
+            <source src="img/seu-video.mp4" type="video/mp4">
+            Seu navegador não suporta vídeos.
+        </video>
+        <button id="btnVideo" class="btn-pular" onclick="pularVideo()">Pular vídeo ❯</button>
+    </div>
+
+    <div id="transicao-pos-video" class="overlay-tela" style="display: none;">
+        <div class="spinner-simples"></div>
+        <p style="color: white; font-style: italic; letter-spacing: 2px;">Abrindo nosso mundo...</p>
+    </div>
+
+    <div id="conteudo-principal" style="display: none;">
+        <div class="hearts"></div>
+
+        <div class="header">Para a mulher incrível que tenho a sorte de amar 🤍</div>
+
+        <div class="container">
+            <div class="music">
+                <img src="img/album.jpeg" class="albumCover">
+                <div class="musicTitle">Mirrors</div>
+                <div class="musicArtist">Justin Timberlake</div>
+                <div class="progress-container" id="progressArea">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="controls">
+                    <button class="control-btn" onclick="manualMudarSlide(-1)">⏮</button>
+                    <button class="control-btn play-trigger" id="playBtn" onclick="togglePlay()">▶</button>
+                    <button class="control-btn" onclick="manualMudarSlide(1)">⏭</button>
+                </div>
+                <audio id="musica" src="img/musica.mp3" preload="auto"></audio>
+            </div>
+
+            <div class="slider">
+                <button class="prev" onclick="manualMudarSlide(-1)">❮</button>
+                <button class="next" onclick="manualMudarSlide(1)">❯</button>
+                <div class="slides-container" id="3d-slides">
+                    <img src="img/foto1.jpeg" class="slide-item">
+                    <img src="img/foto2.jpeg" class="slide-item">
+                    <img src="img/foto3.jpeg" class="slide-item">
+                    <img src="img/foto4.jpeg" class="slide-item">
+                    <img src="img/foto5.jpeg" class="slide-item">
+                    <img src="img/foto6.jpeg" class="slide-item">
+                    <img src="img/foto7.jpeg" class="slide-item">
+                </div>
+            </div>
+
+            <h2 style="margin-top: 20px;">Andre Gustavo e Emily</h2>
+            <p>Juntos desde 07/10/2022</p>
+
+            <div class="timer">
+                <div class="box"><span id="years"></span><div class="label">Anos</div></div>
+                <div class="box"><span id="months"></span><div class="label">Meses</div></div>
+                <div class="box"><span id="days"></span><div class="label">Dias</div></div>
+                <div class="box"><span id="hours"></span><div class="label">Horas</div></div>
+                <div class="box"><span id="minutes"></span><div class="label">Minutos</div></div>
+                <div class="box"><span id="seconds"></span><div class="label">Segundos</div></div>
+            </div>
+
+            <button onclick="mostrarEnvelope()" id="btnMensagem" class="loveBtn">Uma mensagem para você 💌</button>
+
+            <div id="envelope" class="envelope-wrapper" style="display: none;" onclick="toggleCarta()">
+                <div class="envelope-flap"></div>
+                <div class="envelope-front"></div>
+                <div class="envelope-paper">
+                    <div class="paper-content">
+                        <img src="img/fotoCarta.jpeg" class="foto-interna">
+                        <div class="texto-carta">
+                            <h2>Para você, Meu Amor! 🤍</h2>
+                            <p>   Minha vida,
+
+Hoje você faz 20 anos… e eu só consigo pensar em como sou sortudo por ter você na minha vida.
+
+Você é uma das pessoas mais incríveis que eu já conheci. Seu jeito, seu sorriso, sua forma de ver o mundo… tudo em você me faz ter ainda mais certeza de que eu escolhi a pessoa certa para amar.
+
+Eu sei que a distância às vezes aperta o coração. Tem dias que tudo que eu queria era simplesmente poder te abraçar, ficar do seu lado sem pressa, ouvir sua risada de perto. Mas mesmo longe, você continua sendo a parte mais importante da minha vida.
+
+Você me faz bem, me faz querer ser melhor, me faz acreditar que tudo vale a pena quando é com você.
+
+Hoje, no seu aniversário, eu só quero que você saiba o quanto você é especial pra mim. Que você nunca esqueça o quanto é linda, forte, inteligente e maravilhosa.
+
+Eu tenho muito orgulho da mulher que você é… e ainda mais orgulho de poder caminhar ao seu lado.
+
+Feliz 20 anos, meu amor.
+Que sua vida seja cheia de felicidade, sonhos realizados e momentos lindos… e se depender de mim, eu quero estar ao seu lado em todos eles.
+
+Eu te amo muito. 🤍</p>
+                            <p style="text-align: right; font-weight: bold; margin-top: 10px;">Com amor, Do seu Gugu.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timelineSection">
+                <h2 class="timelineTitle">Nossa História ❤️</h2>
+                <div class="timeline">
+                    <div class="timelineItem left">
+                        <div class="timelineContent">
+                            <img src="img/momento1.jpeg">
+                            <div class="timelineText">
+                                <h3>28/01/2019</h3>
+                                <p>O dia em que nosso amor começou.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timelineItem right">
+                        <div class="timelineContent">
+                            <img src="img/momento2.jpeg">
+                            <div class="timelineText">
+                                <h3>O Reencontro</h3>
+                                <p>Primeiro encontro depois de anos longe. Um dia inesquecível.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timelineItem left">
+                        <div class="timelineContent">
+                            <img src="img/momento3.jpeg">
+                            <div class="timelineText">
+                                <h3>Viagem ao RJ</h3>
+                                <p>Primeira vinda para o Rio. Momentos incríveis juntos.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timelineItem right">
+                        <div class="timelineContent">
+                            <img src="img/momento4.jpeg">
+                            <div class="timelineText">
+                                <h3>Nosso Futuro</h3>
+                                <p>Onde meu coração quer chegar... nosso casamento.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
